@@ -8,19 +8,6 @@
 
 #define negative_to_zero(i) (i < 0 ? 0 : i)
 
-//move to header file
-
-//void main() {
-//	//int i;
-//
-//	//srand(time(NULL));
-//
-//	////for (i = 0; i < 50; i++) {
-//	////	printf("%d\n", dice_roll(1, 6));
-//	////	Sleep(100);
-//	////}
-//}
-
 int dice_roll(int startNum, int endNum) {
 	return rand() % (endNum - startNum) + 1;
 }

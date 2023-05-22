@@ -133,6 +133,10 @@
   <ItemGroup>
     <ClInclude Include="combat_functions.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="dataFiles\atkCountry.txt" />
+    <Text Include="dataFiles\defCountry.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

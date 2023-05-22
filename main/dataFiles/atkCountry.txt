@@ -1,0 +1,8 @@
+country Discipline Morale Tactics inf.combat cav.combat art.combat inf.damage cav.damage art.damage
+name fire shock manuver siege traitID
+type atkfire deffire atkshock defshock atkmorale defmorale
+ENG 1.05 4.0 2.25 1.1 1.0 1.0 1.0 1.0 1.0
+"John Sholmes" 3 4 6 2 0
+inf 3 2 2 2 2 2
+cav 1 1 3 3 3 3
+art 3 2 1 1 2 1
