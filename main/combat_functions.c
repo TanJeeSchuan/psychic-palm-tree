@@ -3,7 +3,6 @@
 #include<time.h>
 #include<windows.h>
 #include"combat_functions.h"
-#include"stringm.h"
 
 #define UNIT_SIZE 1000
 
