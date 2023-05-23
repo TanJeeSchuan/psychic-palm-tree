@@ -1,7 +1,9 @@
 #include <stdlib.h>
 #include<stdio.h>
 
-#pragma warning(disable:4996)
+#define PATHLENGTH 257
+
+#pragma warning(disable: 4996)
 
 #pragma region structs
 
@@ -41,7 +43,7 @@ struct battle
 
 #pragma endregion
 
-int initialise_battle(struct battle *battle ,char atkPath[257], char defPath[257], char terrainPath[257]);
+int initialise_battle(struct battle *battle ,char *atkPath, char *defPath, char *terrainPath);
 
 void main()
 {
@@ -55,7 +57,7 @@ void main()
 	printf("test");
 }
 
-int initialise_battle(struct battle* battle, char atkPath[257], char defPath[257], char terrainPath[257])
+int initialise_battle(struct battle* battle, char *atkPath, char *defPath, char *terrainPath)
 {
 #pragma region Attacking Country
 	FILE* fp = fopen(atkPath, "r");
