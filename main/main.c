@@ -54,7 +54,7 @@ void main()
 		printf("Unable to initailise battle");
 		return -1;
 	}
-	printf("test");
+	printf("tested");
 }
 
 int initialise_battle(struct battle* battle, char *atkPath, char *defPath, char *terrainPath)
