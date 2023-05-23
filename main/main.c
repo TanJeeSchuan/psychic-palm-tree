@@ -30,7 +30,7 @@ struct countryDetails
 struct terrain
 {
 	char terrainType[31];
-	int diceroll;
+	int diceroll, river, straits, ampLanding, fort;
 };
 
 struct battle
@@ -47,8 +47,11 @@ void main()
 {
 	struct battle battle;
 
-	if (initialise_battle(&battle, "dataFiles\\atkCountry.txt", "dataFiles\\defCountry.txt", "dataFiles\\atkCountry.txt") == -1)
-		exit(-1);
+	if (initialise_battle(&battle, "dataFiles\\atkCountry.txt", "dataFiles\\defCountry.txt", "dataFiles\\terrain.txt") == -1)
+	{
+		printf("Unable to initailise battle");
+		return -1;
+	}
 	printf("test");
 }
 
@@ -100,12 +103,18 @@ int initialise_battle(struct battle* battle, char atkPath[257], char defPath[257
 	fclose(fp);
 #pragma endregion
 
-//#pragma region Terrain
-//	FILE* fp = fopen(terrainPath, "r");
-//	if (fp == NULL)
-//	{
-//		printf("Cannot open file");
-//		return -1;
-//	}
-//#pragma endregion
+#pragma region Terrain
+	fp = fopen(terrainPath, "r");
+	if (fp == NULL)
+	{
+		printf("Cannot open file");
+		return -1;
+	}
+
+	if (fscanf(fp, "%*[^\n]\n") != 0)
+		return -1;
+	if (fscanf(fp, "%s %d %d %d %d\n", &battle->terrain.terrainType,&battle->terrain.river, &battle->terrain.straits, &battle->terrain.ampLanding, &battle->terrain.fort) == 0)
+		return -1;
+	fclose(fp);
+#pragma endregion
 }

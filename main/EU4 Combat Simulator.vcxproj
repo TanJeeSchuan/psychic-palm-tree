@@ -136,6 +136,7 @@
   <ItemGroup>
     <Text Include="dataFiles\atkCountry.txt" />
     <Text Include="dataFiles\defCountry.txt" />
+    <Text Include="dataFiles\terrain.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

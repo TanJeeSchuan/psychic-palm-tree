@@ -34,5 +34,8 @@
     <Text Include="dataFiles\defCountry.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="dataFiles\terrain.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
